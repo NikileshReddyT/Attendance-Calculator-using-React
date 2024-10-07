@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import '../styles.css';
 import logo from '../images/changed2.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default function AttendanceCalculator() {
+
+    const navigate = useNavigate();
 
     const [desiredPercentage, setDesiredPercentage] = useState('');
     const [conductedClasses, setConductedClasses] = useState('');
@@ -83,7 +86,7 @@ export default function AttendanceCalculator() {
 
   return (
     <div className="container">
-      <div className="logo-container">
+      <div className="logo-container" onClick={()=>{navigate("/")}}>
         <img src={logo} alt="Attendance Calculator Logo" className="logo" />
       </div>
       <label htmlFor="desiredPercentage">Desired Attendance Percentage:</label>
@@ -116,6 +119,8 @@ export default function AttendanceCalculator() {
       <button onClick={calculateAttendance}>Calculate</button>
 
       <div id="result" dangerouslySetInnerHTML={{ __html: result }}></div>
+      <p className="copyright">© 2024 Nikilesh Reddy</p>
+
     </div>
   )
 }

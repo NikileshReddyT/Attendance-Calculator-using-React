@@ -1,15 +1,20 @@
-import { useState } from 'react'
-
-import AttendanceCalculator from './Components/AttendanceCalculator'
+import AttendanceCalculator from "./Components/AttendanceCalculator";
+import LTPSAttendanceCalculator from './Components/LTPS-AttendanceCalculator'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <AttendanceCalculator/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/ltps' element={<AttendanceCalculator />} />
+          <Route path='/classes' element={<LTPSAttendanceCalculator />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

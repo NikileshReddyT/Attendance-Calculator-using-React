@@ -1,44 +1,17 @@
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4e555b, #95a5a6, #bdc3c7);
-    background-size: 400% 400%;
-    animation: gradientBackground 25s ease infinite;
+* {
+    padding: 0;
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* background: linear-gradient(135deg, #2c3e50, #4e555b, #95a5a6, #bdc3c7); */
-
-
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    box-sizing: border-box;
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     max-width: 440px;
     width: 100%;
-    /* width: fit-content; */
-    animation: fadeIn 1s ease;
 }
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 
 h1 {
     text-align: center;
@@ -46,6 +19,22 @@ h1 {
     margin-bottom: 20px;
     font-size: 24px;
 }
+.ltps-class{
+    display: flex;
+    flex-direction: column;
+    .form-label{
+        text-align: center;
+    }
+
+}
+.ltps-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin:0 0 15px 0;
+} 
 
 label {
     margin-top: 15px;
@@ -55,7 +44,7 @@ label {
     font-size: 14px;
 }
 
-input[type="text"] {
+input[type="number"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0 15px 0;
@@ -66,7 +55,7 @@ input[type="text"] {
     transition: all 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="number"]:focus {
     border-color: #4e555b;
     outline: none;
     box-shadow: 0 0 8px rgba(78, 85, 91, 0.3);
@@ -89,17 +78,6 @@ button:hover {
 }
 
 #result {
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: center;
-    color: #333;
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-/* Basic styling for the result */
-#result {
     font-family: 'Helvetica Neue', sans-serif;
     margin-top: 20px;
     font-size: 16px;
@@ -109,13 +87,8 @@ button:hover {
     padding: 15px;
     border-radius: 6px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-    /* width added */
-
-     /* Changed from fit-content to 100% */
-
 }
 
-/* Highlight the percentages */
 #result span.percentage {
     font-weight: bold;
     color: #2c3e50;
@@ -124,36 +97,38 @@ button:hover {
     border-radius: 4px;
 }
 
-/* Styling for important messages */
 #result .important-info {
     font-weight: bold;
     color: #4e555b;
     font-size: 1.13em;
 }
 
-/* Emphasize class count with a contrasting color */
 #result .class-count {
-    font-weight:bolder;
-    color: #263c6d; /* Contrasting green */
+    font-weight: bolder;
+    color: #263c6d;
     font-size: 1em;
 }
 
 .logo-container {
     text-align: center;
-    
-}
-.logo{
-    width: 400px;
-    
 }
 
+.logo {
+    width: 400px;
+}
+
+.error-message{
+    color: red;
+    font-size: larger;
+    margin-top: 5px;
+    text-align: center;
+}
 .copyright{
     text-align: center;
     font-size: 12px;
     color: #333;
     margin-top: 10px;
 }
-
 
 @media (max-width: 768px) {
     h1 {
@@ -168,6 +143,7 @@ button:hover {
     #result {
         font-size: 15px;
     }
+
     .logo {
         width: 250px;
     }
@@ -187,7 +163,7 @@ button:hover {
         font-size: 13px;
     }
 
-    input[type="text"] {
+    input[type="number"] {
         padding: 8px;
         font-size: 13px;
     }
@@ -196,11 +172,37 @@ button:hover {
         font-size: 14px;
         padding: 8px;
     }
+    .ltps-main{
+        flex-direction: column;
+     
+    }
+    .ltps-class{
+        margin: 0;
+        flex-direction: row;
+
+        .form-label{
+            
+            margin-right: auto;
+            flex-grow: 1;
+        }
+        .form-input{
+            margin-left: auto;
+            flex-grow: 1;
+        }
+    }
+    input[type="number"] {
+        
+        width: 50%;
+        padding: 10px;
+        margin: 8 0 10px 0;
+
+    }
 
     #result {
         font-size: 14px;
         padding: 12px;
     }
+
     .logo {
         width: 250px;
     }
@@ -215,11 +217,35 @@ button:hover {
         font-size: 12px;
     }
 
+    .ltps-main{
+        flex-direction: column;
+     
+    }
+    .ltps-class{
+        margin: 0;
+        flex-direction: row;
+
+        .form-label{
+            
+            margin-right: auto;
+        }
+        .form-input{
+            margin-left: auto;
+        }
+    }
+    input[type="number"] {
+        
+        width: 50%;
+        padding: 5px;
+        margin: 8 0 10px 0;
+
+    }
+
     button {
         font-size: 13px;
     }
 
     #result {
-        font-size: 13px;
+        font-size: 10px;
     }
 }
