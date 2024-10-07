@@ -1,68 +1,72 @@
 .home-container {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    animation: fadeIn 1s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 30px 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .home-logo-container {
-    margin-bottom: 40px;
-    cursor: pointer;
+  margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .logo {
-    width: 400px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+  width: 400px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .logo:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .home-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 50px;
-    max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  max-width: 400px;
 }
 
 .home-buttons button {
-    width: 60%;
-    padding: 15px;
-    background-color: #4e555b;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  width: 60%;
+  padding: 15px;
+  background-color: #4e555b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .home-buttons button:hover {
-    background-color: #2c3e50;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  background-color: #2c3e50;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .home-buttons button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

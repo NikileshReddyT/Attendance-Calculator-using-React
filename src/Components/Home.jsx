@@ -28,6 +28,8 @@ const Home = () => {
         LTPS
       </button>
       </div>
+      <p className="copyright">© 2024 Nikilesh Reddy</p>
+
     </div>
   );
 };
