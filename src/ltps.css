@@ -129,7 +129,6 @@ button:hover {
     color: #333;
     margin-top: 10px;
 }
-
 @media (max-width: 768px) {
     h1 {
         font-size: 22px;
@@ -146,6 +145,16 @@ button:hover {
 
     .logo {
         width: 250px;
+    }
+
+    /* Adjust spacing and alignment for LTPS inputs */
+    .ltps-main {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input[type="number"] {
+        width: 100%; /* Expand to full width on smaller screens */
     }
 }
 
@@ -172,30 +181,32 @@ button:hover {
         font-size: 14px;
         padding: 8px;
     }
-    .ltps-main{
+
+    .ltps-main {
         flex-direction: column;
-     
+        gap: 15px;
     }
-    .ltps-class{
-        margin: 0;
+
+    .ltps-class {
+        display: flex;
         flex-direction: row;
-
-        .form-label{
-            
-            margin-right: auto;
-            flex-grow: 1;
-        }
-        .form-input{
-            margin-left: auto;
-            flex-grow: 1;
-        }
+        justify-content: space-between;
+        width: 100%;
+        gap: 10px;
     }
-    input[type="number"] {
-        
-        width: 50%;
-        padding: 10px;
-        margin: 8 0 10px 0;
 
+    .form-label {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+
+    .form-input {
+        flex-grow: 1;
+        width: 100%; /* Full width for input fields */
+    }
+
+    input[type="number"] {
+        width: 100%;
     }
 
     #result {
@@ -204,7 +215,7 @@ button:hover {
     }
 
     .logo {
-        width: 250px;
+        width: 200px;
     }
 }
 
@@ -217,35 +228,44 @@ button:hover {
         font-size: 12px;
     }
 
-    .ltps-main{
-        flex-direction: column;
-     
-    }
-    .ltps-class{
-        margin: 0;
-        flex-direction: row;
-
-        .form-label{
-            
-            margin-right: auto;
-        }
-        .form-input{
-            margin-left: auto;
-        }
-    }
     input[type="number"] {
-        
-        width: 50%;
         padding: 5px;
-        margin: 8 0 10px 0;
-
+        font-size: 12px;
     }
 
     button {
         font-size: 13px;
+        padding: 7px;
+    }
+
+    .ltps-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ltps-class {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-label {
+        flex-grow: 1;
+    }
+
+    .form-input {
+        flex-grow: 1;
+    }
+
+    input[type="number"] {
+        width: 100%;
     }
 
     #result {
-        font-size: 10px;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .logo {
+        width: 180px;
     }
 }

@@ -94,8 +94,10 @@
   
   @media (max-width: 480px) {
     .home-container {
-      padding: 15px;
+        padding: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
+
   
     .logo {
       width: 250px;
