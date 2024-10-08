@@ -52,7 +52,7 @@ export default function AttendanceCalculator() {
         }
 
         if (totalWeight === 0) {
-            setErrorMessage('Please enter at least one valid component.');
+            setErrorMessage('At least one Percentage value should be provided.');
             return;
         }
 
